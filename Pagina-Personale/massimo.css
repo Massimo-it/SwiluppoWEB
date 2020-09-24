@@ -1,0 +1,295 @@
+/* CSS style per il sito personale di Massimo Dattero */
+
+/* impostazioni generali */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kufam', cursive;
+  color: #0000cc;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+span {
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+hr {
+  border-top: 20px solid #0000cc;
+}
+
+main, section {
+  background: linear-gradient(to bottom, rgb(230, 255, 255), rgb(179, 255, 255));
+}
+
+.torna-su {
+  text-align: center;
+}
+
+h3 {
+  padding: 10px;
+}
+
+/* barra di navigazione */
+
+.contenitore-mobile {
+  /*max-width: 480px;*/
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(to bottom, rgb(230, 255, 255), rgb(179, 255, 255));
+}
+
+#barra-navigazione {
+  overflow: hidden;
+  background-color: #0000cc;
+  position: relative;
+  padding-top: 14px;
+  padding-right: 0;
+  padding-bottom: 14px;
+  padding-left: 0;
+}
+
+#logo {
+  padding-left: 10px;
+  padding-top: 5px;
+  background-color: #0000cc;
+  color: #ffffff;
+}
+
+#menu a {
+  color: rgb(230, 255, 255);
+  display: block;
+  padding: 14px 16px;
+}
+
+#menu {
+  display: none;
+  margin-top: 20px;
+}
+
+.tre-righe {
+  background: rgb(0, 230, 230);
+  position: absolute;
+  padding: 5px 16px;
+  font-size: 30px;
+  right: 0;
+  top: 0;
+}
+
+.tre-righe:hover {
+  background-color: #0000cc;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+#menu a:hover {
+  background-color: rgb(0, 230, 230);
+  color: #0000cc;
+}
+
+/* pagina home */
+
+.main-sopra {
+  background-image: url("immagini/stairway.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+  height: 400px;
+}
+
+.fotoMassimo {
+  width: 30%;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.aforismi {
+  width: 90%;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.aforismi p {
+  background-color: rgb(230, 255, 255);
+  padding: 5px;
+}
+
+/* sezione soft skills e hard skills */
+
+.accordion-generale {
+  padding: 0 15px;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc; 
+}
+
+.pannello {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.testo-pannello {
+  padding: 10px 0;
+}
+
+/* sezione la mia storia */
+
+.storia {
+  padding: 0 18px;
+  background-color: white;
+}
+
+.paragrafi-storia {
+  padding: 10px 0;
+}
+
+.immagini-storia {
+  width: 90%;
+  display: block;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+/* contatti */
+
+.testo-contatti {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(230, 255, 255);
+}
+
+.bottone {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #0000cc;
+  border: 1px solid #0000cc;
+}
+
+.bottone a {
+  color: white;
+}
+
+.bottone:hover {
+  background-color: #000080;
+}
+
+
+/* pie di pagina */
+
+footer {
+  background-color: #0000cc;
+}
+
+.footer-blocco1 {
+  padding: 5px 0 0 5px;
+}
+
+.piedipagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.piedipagina p {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.footer-blocco2 img{
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid #0000cc;
+}
+
+.footer-blocco2 img:hover{
+  border: 2px solid white;
+}
+
+.social img{
+  width: 5%;
+  transition: transform .2s;
+}
+
+.footer-blocco3 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+/* media query per schermi maggiori di 900px  */
+
+@media screen and (min-width: 900px) {
+  .contenitore-mobile {
+    max-width: 100%;
+  }
+  
+  .tre-righe {
+    display: none;
+  }
+  
+  #menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  
+  #barra-navigazione {
+    padding-bottom: 0;
+  }
+  
+  .main-sopra {
+    height: 500px;
+  }
+  
+  .fotoMassimo {
+    width: 20%;
+  }
+  
+  .main-sopra {
+    width:45%;
+  }
+  
+  .aforismi {
+    width: 45%;
+    margin-top: 5px;
+  }
+  
+  main {
+    display: flex;
+  }
+  
+  .immagini-storia {
+  width: 30%;
+  }
+  
+}
