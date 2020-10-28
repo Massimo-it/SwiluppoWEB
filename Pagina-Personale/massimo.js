@@ -26,13 +26,16 @@ function chiudiMenu() {
 
 function attivaBlocco(n) {
 	let sez = document.getElementsByClassName("pannello");
+	let symbol = document.getElementsByClassName("simbolo");
 	if (sez[n].style.display === "block") {
 		sez[n].style.display = "none";
+		symbol[n].innerHTML = " &#9947 ";  // triangolo
 	} else {
 		for (let i = 0; i < sez.length; i++) {
 			sez[i].style.display = "none";
 		}
 		sez[n].style.display = "block";
+		symbol[n].innerHTML = " &#9932 ";  // croce
 	}
 }
 
